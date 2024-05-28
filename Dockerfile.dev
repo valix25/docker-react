@@ -1,0 +1,18 @@
+# Specify a base image
+
+FROM node:21-alpine
+
+WORKDIR /app
+
+# Install some dependencies
+COPY ./package.json ./
+RUN npm install
+COPY ./ ./
+
+# Default command
+
+CMD ["npm", "run", "start"]
+
+# docker build -f Dockerfile.dev .
+# docker run -p 3000:3000 253dd0b77c2c033e7
+# docker run -p 3000:3000 -v /app/node_modules -v $(pwd):/app 21721699c61
