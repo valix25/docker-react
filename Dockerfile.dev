@@ -14,6 +14,7 @@ COPY ./ ./
 CMD ["npm", "run", "start"]
 
 # docker build -f Dockerfile.dev .
+# docker build -t valix07/docker-react -f ./Dockerfile.dev .
 # docker run -p 3000:3000 253dd0b77c2c033e7
 # docker run -p 3000:3000 -v /app/node_modules -v $(pwd):/app 21721699c61
 # docker run b5ac13a4fef1d2 npm run test -- --coverage
