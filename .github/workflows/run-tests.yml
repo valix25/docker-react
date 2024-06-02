@@ -2,7 +2,7 @@ name: Run Tests Workflow
 
 on:
   # Only trigger the action for every change of the branch within a PR to master
-  pull-request:
+  pull_request:
     branches:
       - master
   # or trigger manually
