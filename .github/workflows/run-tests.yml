@@ -1,10 +1,12 @@
-name: Test Workflow
+name: Run Tests Workflow
+
 on:
+  # Only trigger the action for every change of the branch within a PR to master
   pull-request:
     branches:
       - master
-    paths:
-      - ".github/workflows/test.yml"
+  # or trigger manually
+  workflow_dispatch:
 
 jobs:
   build:
