@@ -27,12 +27,12 @@ jobs:
         run: zip -r deploy.zip . -x '*.git*'
  
       - name: Deploy to EB
-        uses: einaregilsson/beanstalk-deploy@v21
+        uses: einaregilsson/beanstalk-deploy@v22
         with:
           aws_access_key: ${{ secrets.AWS_ACCESS_KEY }}
           aws_secret_key: ${{ secrets.AWS_SECRET_KEY }}
           application_name: frontend
-          environment_name: Frontend-env
+          environment_name: Frontend-env-1
           existing_bucket_name: elasticbeanstalk-eu-north-1-637423329308
           region: eu-north-1
           version_label: ${{ github.sha }}
